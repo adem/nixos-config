@@ -14,6 +14,7 @@
     helix.packages."${pkgs.system}".helix
     rustc
     rust-analyzer
+    teamspeak_client
   ];
 
   hardware.opengl.enable = true;
@@ -35,6 +36,11 @@
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "curses";
+  };
 
   programs.zsh = {
     autosuggestions.enable = true;

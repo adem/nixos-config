@@ -35,10 +35,13 @@
 
   programs.git = {
     enable = true;
+    signing = {
+      key = "5C0125ED93A6C45E";
+      signByDefault = true;
+    };
     userName = "Adem Aydin";
     userEmail = "mail@adem.dev";
   };
-
 
   programs.home-manager.enable = true;
 
