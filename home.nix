@@ -1,38 +1,42 @@
 { config, pkgs, ...}:
 
 {
-  home.username = "adem";
-  home.homeDirectory = "/home/adem";
-
-  home.packages = with pkgs; [
-    firefox
-    gnumake
-    helix
-    iosevka
-    keepassxc
-    llvm_16
-    mpv
-    nnn
-    nodePackages.typescript
-    nodePackages.typescript-language-server
-    nodejs
-    pavucontrol
-    python3
-    signal-desktop
-    subversion
-    sqlite
-    unzip
-    unrar
-    weechat
-  ];
-
-  home.pointerCursor = {
-    name = "Adwaita";
-    package = pkgs.gnome.adwaita-icon-theme;
-    size = 24;
+  home = {
+    file.".profile" = {
+      text = ''
+        export EDITOR=hx
+      '';
+    };
+    homeDirectory = "/home/adem";
+    packages = with pkgs; [
+        firefox
+        gnumake
+        helix
+        iosevka
+        keepassxc
+        llvm_16
+        mpv
+        nnn
+        nodePackages.typescript
+        nodePackages.typescript-language-server
+        nodejs
+        pavucontrol
+        python3
+        signal-desktop
+        subversion
+        sqlite
+        unzip
+        unrar
+        weechat
+      ];
+    pointerCursor = {
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
+      size = 24;
+    };
+    stateVersion = "23.05";
+    username = "adem";
   };
-
-  home.stateVersion = "23.05";
 
   programs.git = {
     enable = true;
