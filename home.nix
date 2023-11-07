@@ -11,6 +11,7 @@
     iosevka
     keepassxc
     llvm_16
+    mpv
     nnn
     nodePackages.typescript
     nodePackages.typescript-language-server
@@ -52,6 +53,8 @@
       placement_strategy = "top-left";
     };
   };
+
+  programs.zathura.enable = true;
 
   wayland.windowManager.sway = {
     enable = true;
