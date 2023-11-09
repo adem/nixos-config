@@ -2,9 +2,28 @@
 
 {
   home = {
-    file.".profile" = {
-      text = ''
-        export EDITOR=hx
+    file={
+      ".profile" = {
+        text = ''
+          export EDITOR=hx
+        '';
+      };
+      ".config/helix/config.toml".text = ''
+        theme = "autumn"
+
+        [editor]
+        auto-save = true
+        auto-format = true
+        line-number = "relative"
+        rulers = [80]
+
+        [editor.cursor-shape]
+        insert = "bar"
+      '';
+      ".config/helix/languages.toml".text = ''
+        [[language]]
+        name = "cpp"
+        auto-format = true
       '';
     };
     homeDirectory = "/home/adem";
