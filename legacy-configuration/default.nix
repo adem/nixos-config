@@ -39,6 +39,8 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs.ccache.enable = true;
+
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "curses";
@@ -56,6 +58,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  services.ratbagd.enable = true;
   system.stateVersion = "23.05";
 
   time.timeZone = "Europe/Berlin";

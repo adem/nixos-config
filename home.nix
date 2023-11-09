@@ -28,10 +28,15 @@
     };
     homeDirectory = "/home/adem";
     packages = with pkgs; [
+        bc
+        cmake
+        doxygen
         firefox
         gnumake
         helix
+        include-what-you-use
         iosevka
+        jellyfin-media-player
         keepassxc
         llvm_16
         mpv
@@ -40,6 +45,7 @@
         nodePackages.typescript-language-server
         nodejs
         pavucontrol
+        piper
         python3
         signal-desktop
         subversion
@@ -47,6 +53,7 @@
         unzip
         unrar
         weechat
+        wl-clipboard
       ];
     pointerCursor = {
       name = "Adwaita";
