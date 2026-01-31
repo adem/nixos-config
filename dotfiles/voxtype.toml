@@ -1,0 +1,24 @@
+[audio]
+device = "default"
+sample_rate = 16000
+max_duration_secs = 60
+
+[audio.feedback]
+enabled = false
+# theme = "default"
+# volume = 0.7
+
+[hotkey]
+enabled = false
+
+[output]
+mode = "type"
+
+[output.notification]
+on_recording_start = true
+on_recording_stop = true
+on_transcription = true
+
+[whisper]
+model = "small.en"
+

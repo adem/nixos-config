@@ -1,0 +1,2 @@
+fonts/** filter=git-crypt diff=git-crypt
+home-manager/syncthing/devices.nix filter=git-crypt diff=git-crypt
