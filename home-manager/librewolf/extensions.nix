@@ -4,6 +4,7 @@ let
 in
 {
   base = [
+    addons.browserpass
     addons.keepassxc-browser
     addons.sponsorblock
     addons.vimium-c

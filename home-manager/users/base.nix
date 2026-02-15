@@ -11,6 +11,10 @@
   home.stateVersion = "25.11";
 
   programs = {
+    browserpass = {
+      enable = true;
+      browsers = [ "firefox" ];
+    };
     direnv = {
       enable = true;
       nix-direnv.enable = true;
@@ -19,6 +23,13 @@
     git = import ../git.nix { inherit email; };
     ghostty = import ../ghostty.nix;
     keepassxc = import ../keepassxc.nix;
+    password-store = {
+      enable = true;
+      package = pkgs.pass-wayland;
+      settings = {
+        PASSWORD_STORE_DIR = "~/.password-store";
+      };
+    };
     zellij.enable = true;
   };
 
