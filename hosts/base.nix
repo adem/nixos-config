@@ -5,6 +5,7 @@
   environment = {
     systemPackages = with pkgs; [
       chromium
+      fd
       fzf
       git-crypt
       gitui
@@ -19,6 +20,7 @@
       nixfmt
       nnn
       obs-studio
+      ripgrep
       rofi
       slurp
       sshfs
