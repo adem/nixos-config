@@ -11,6 +11,10 @@
     gap = "git add -p";
     gc = "git commit";
     gca = "git commit --amend";
+    gd = "git diff";
+    gl = "git log";
+    gpull = "git pull";
+    gpush = "git push";
     gs = "git status";
     gspo = "git stash pop";
     gspu = "git stash push -u";
