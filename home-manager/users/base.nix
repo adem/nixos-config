@@ -33,5 +33,8 @@
     zellij.enable = true;
   };
 
-  xdg.configFile."zellij/config.kdl".source = ../../dotfiles/zellij.kdl;
+  xdg.configFile = {
+    "voxtype/config.toml".source = ../../dotfiles/voxtype.toml;
+    "zellij/config.kdl".source = ../../dotfiles/zellij.kdl;
+  };
 }

@@ -5,11 +5,23 @@ let
   screencast = pkgs.callPackage ../../packages/screencast.nix { wfrecorder = pkgs.wf-recorder; };
 in
 {
+  programs.waybar = import ../waybar;
+
   wayland.windowManager.sway = {
     enable = true;
     config = {
-      modifier = "Mod4";
-      terminal = "ghostty";
+      bars = [ ];
+      input = {
+        "type:keyboard" = {
+          xkb_options = "caps:escape,grp:ctrl_space_toggle";
+          xkb_layout = "us,de";
+          repeat_delay = "150";
+          repeat_rate = "60";
+        };
+        "type:pointer" = {
+          accel_profile = "flat";
+        };
+      };
       keybindings =
         let
           modifier = "Mod4";
@@ -31,21 +43,13 @@ in
           "--no-repeat ${modifier}+Shift+v" = "exec voxtype record start";
           "--release ${modifier}+Shift+v" = "exec voxtype record stop";
         };
-      input = {
-        "type:keyboard" = {
-          xkb_options = "caps:escape,grp:ctrl_space_toggle";
-          xkb_layout = "us,de";
-          repeat_delay = "150";
-          repeat_rate = "60";
-        };
-        "type:pointer" = {
-          accel_profile = "flat";
-        };
-      };
+      modifier = "Mod4";
       startup = [
         { command = "brightnessctl -d '*kbd*' set 1%"; }
+        { command = "waybar"; }
       ];
+      terminal = "ghostty";
+      window.titlebar = false;
     };
   };
-  xdg.configFile."voxtype/config.toml".source = ../../dotfiles/voxtype.toml;
 }

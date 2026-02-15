@@ -9,6 +9,8 @@
     ./hardware-configuration.nix
   ];
 
+  boot.kernelParams = [ "appledrm.show_notch=1" ];
+
   boot.loader.efi.canTouchEfiVariables = false;
 
   environment.systemPackages = with pkgs; [

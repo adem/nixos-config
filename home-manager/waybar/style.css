@@ -1,0 +1,46 @@
+* {
+  border: none;
+  font-family: "PragmataPro Mono", monospace;
+  font-size: 14px;
+}
+
+#battery.charging {
+  color: #b8bb26;
+}
+
+#battery.warning {
+  color: #fabd2f;
+}
+
+#battery.critical {
+  color: #fb4934;
+}
+
+#mode,
+#cpu,
+#memory,
+#clock,
+#network,
+#disk,
+#battery {
+  padding: 0 10px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: #ebdbb2;
+  padding: 0 5px;
+}
+
+#workspaces button.focused {
+  background-color: #458588;
+}
+
+#workspaces button.urgent {
+  background-color: #fb4934;
+}
+
+window#waybar {
+  background-color: #282828;
+  color: #ebdbb2;
+}
