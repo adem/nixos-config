@@ -36,7 +36,7 @@ in
     enable = true;
     settings = {
       devices = {
-        inherit (syncthing.devices) phone nas;
+        inherit (syncthing.devices) nas phone rpc;
       };
       folders = with syncthing.folders; {
         password-db = password-db.withDevices [ "phone" ];
@@ -49,6 +49,7 @@ in
           "nas"
           "phone"
         ];
+        rpc = rpc.withDevices [ "rpc" ];
         snes = snes.withDevices [ "nas" ];
       };
       options.urAccepted = -1;
