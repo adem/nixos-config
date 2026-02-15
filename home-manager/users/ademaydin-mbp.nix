@@ -10,7 +10,6 @@ in
 {
   imports = [
     base
-    ../mako.nix
   ];
 
   home.packages = [ pkgs.freerdp ];

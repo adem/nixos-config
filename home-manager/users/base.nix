@@ -3,6 +3,7 @@
 {
   imports = [
     ../helix.nix
+    ../mako.nix
     ../sway/${sway}.nix
   ];
 
