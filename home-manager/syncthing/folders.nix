@@ -15,6 +15,7 @@ in
   music-partial = folder "music-partial";
   music-transcoded = folder "music-transcoded";
   notes = folder "notes";
+  roehre = folder "roehre";
   rpc = folder "rpc";
   snes = folder "snes";
 }

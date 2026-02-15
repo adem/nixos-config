@@ -57,6 +57,11 @@ in
         folders = with syncthing.folders; {
           password-db = password-db.withDevices [ "phone" ];
           music-transcoded = music-transcoded.withDevices [ "nas" ];
+          roehre = roehre.withDevices [
+            "nas"
+            "phone"
+            "rpc"
+          ];
           rpc = rpc.withDevices [ "rpc" ];
         };
         options.urAccepted = -1;

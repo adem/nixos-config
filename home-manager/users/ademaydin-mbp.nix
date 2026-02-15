@@ -31,6 +31,7 @@ in
       };
       folders = with syncthing.folders; {
         password-db = password-db.withDevices [ "phone" ];
+        roehre = roehre.withDevices [ "phone" ];
       };
       options.urAccepted = -1;
     };

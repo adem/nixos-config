@@ -45,6 +45,10 @@ in
         gbc = gbc.withDevices [ "nas" ];
         music-partial = music-partial.withDevices [ "nas" ];
         notes = notes.withDevices [ "phone" ];
+        roehre = roehre.withDevices [
+          "nas"
+          "phone"
+        ];
         snes = snes.withDevices [ "nas" ];
       };
       options.urAccepted = -1;

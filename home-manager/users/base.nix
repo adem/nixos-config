@@ -5,6 +5,7 @@
     ../helix.nix
     ../mako.nix
     ../sway/${sway}.nix
+    ../zathura.nix
   ];
 
   home.stateVersion = "25.11";
