@@ -20,5 +20,7 @@
     gspu = "git stash push -u";
     n = "nnn";
     rb = "sudo nixos-rebuild switch --flake ~/source/nixos-config";
+    za = "zellij attach";
+    zs = "zellij -s";
   };
 }
