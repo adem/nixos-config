@@ -30,6 +30,10 @@
         "sway/workspaces"
         "sway/mode"
       ];
+      "sway/workspaces" = {
+        disable-scroll-wraparound = true;
+        enable-bar-scroll = true;
+      };
       modules-right = [
         "network"
         "cpu"
