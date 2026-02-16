@@ -37,5 +37,9 @@
   xdg.configFile = {
     "voxtype/config.toml".source = ../../dotfiles/voxtype.toml;
     "zellij/config.kdl".source = ../../dotfiles/zellij.kdl;
+    "zellij/plugins/room.wasm".source = pkgs.fetchurl {
+      url = "https://github.com/rvcas/room/releases/download/v1.2.1/room.wasm";
+      hash = "sha256-kLSDpAt2JGj7dYYhYFh6BfvtzVwTrcs+0jHwG/nActE=";
+    };
   };
 }
