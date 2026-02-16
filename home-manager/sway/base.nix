@@ -1,6 +1,5 @@
 { pkgs, ... }:
 let
-  rofi-window-switcher = pkgs.callPackage ../../packages/rofi-window-switcher.nix { };
   screenshot = pkgs.callPackage ../../packages/screenshot.nix { };
   screencast = pkgs.callPackage ../../packages/screencast.nix { wfrecorder = pkgs.wf-recorder; };
 in
