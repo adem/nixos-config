@@ -21,7 +21,6 @@
       nnn
       obs-studio
       ripgrep
-      rofi
       slurp
       sshfs
       sublime-merge

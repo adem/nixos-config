@@ -23,6 +23,7 @@
     git = import ../git.nix { inherit email; };
     ghostty = import ../ghostty.nix;
     keepassxc = import ../keepassxc.nix;
+    rofi = import ../rofi.nix { inherit pkgs; };
     password-store = {
       enable = true;
       package = pkgs.pass-wayland;
