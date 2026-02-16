@@ -20,6 +20,9 @@ in
         "type:pointer" = {
           accel_profile = "flat";
         };
+        "type:touchpad" = {
+          tap = "enabled";
+        };
       };
       keybindings =
         let
