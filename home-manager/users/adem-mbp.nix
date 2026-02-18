@@ -50,6 +50,7 @@ in
         gb = gb.withDevices [ "nas" ];
         gba = gba.withDevices [ "nas" ];
         gbc = gbc.withDevices [ "nas" ];
+        mp = mp.withDevices [ "nixos-tower" ];
         music-partial = music-partial.withDevices [ "nas" ];
         notes = notes.withDevices [ "phone" ];
         password-db = password-db.withDevices [ "phone" ];

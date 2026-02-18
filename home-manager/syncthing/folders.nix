@@ -12,6 +12,7 @@ in
   gb = folder "gb";
   gba = folder "gba";
   gbc = folder "gbc";
+  mp = folder "mp";
   music-partial = folder "music-partial";
   music-transcoded = folder "music-transcoded";
   notes = folder "notes";

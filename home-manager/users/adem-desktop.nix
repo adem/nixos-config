@@ -63,6 +63,7 @@ in
           claude = claude.withDevices [ "nixos-mbp-adem" ] // {
             path = "~/.claude";
           };
+          mp = mp.withDevices [ "nixos-mbp-adem" ];
           music-transcoded = music-transcoded.withDevices [ "nas" ];
           password-db = password-db.withDevices [ "phone" ];
           roehre = roehre.withDevices [
