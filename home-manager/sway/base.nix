@@ -29,6 +29,8 @@ in
           modifier = "Mod4";
         in
         pkgs.lib.mkOptionDefault {
+          "${modifier}+Tab" = "exec rofi -show window";
+          "${modifier}+c" = "exec rofi -show calc";
           "${modifier}+d" = "exec rofi -show combi";
           "XF86MonBrightnessUp" = "exec brightnessctl -e set 5%+";
           "XF86MonBrightnessDown" = "exec brightnessctl -e set 5%-";
