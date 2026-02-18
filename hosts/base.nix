@@ -1,4 +1,9 @@
-{ pkgs, voxtype-pkg, ... }:
+{
+  pkgs,
+  restream-pkg,
+  voxtype-pkg,
+  ...
+}:
 {
   boot.loader.systemd-boot.enable = true;
 
@@ -20,6 +25,7 @@
       nixfmt
       nnn
       obs-studio
+      restream-pkg
       ripgrep
       slurp
       sshfs
