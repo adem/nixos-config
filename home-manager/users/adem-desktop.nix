@@ -52,11 +52,19 @@ in
       enable = true;
       settings = {
         devices = {
-          inherit (syncthing.devices) phone nas rpc;
+          inherit (syncthing.devices)
+            phone
+            nas
+            nixos-mbp-adem
+            rpc
+            ;
         };
         folders = with syncthing.folders; {
-          password-db = password-db.withDevices [ "phone" ];
+          claude = claude.withDevices [ "nixos-mbp-adem" ] // {
+            path = "~/.claude";
+          };
           music-transcoded = music-transcoded.withDevices [ "nas" ];
+          password-db = password-db.withDevices [ "phone" ];
           roehre = roehre.withDevices [
             "nas"
             "phone"

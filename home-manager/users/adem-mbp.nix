@@ -36,15 +36,23 @@ in
     enable = true;
     settings = {
       devices = {
-        inherit (syncthing.devices) nas phone rpc;
+        inherit (syncthing.devices)
+          nas
+          nixos-tower
+          phone
+          rpc
+          ;
       };
       folders = with syncthing.folders; {
-        password-db = password-db.withDevices [ "phone" ];
+        claude = claude.withDevices [ "nixos-tower" ] // {
+          path = "~/.claude";
+        };
         gb = gb.withDevices [ "nas" ];
         gba = gba.withDevices [ "nas" ];
         gbc = gbc.withDevices [ "nas" ];
         music-partial = music-partial.withDevices [ "nas" ];
         notes = notes.withDevices [ "phone" ];
+        password-db = password-db.withDevices [ "phone" ];
         roehre = roehre.withDevices [
           "nas"
           "phone"
