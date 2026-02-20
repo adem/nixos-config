@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    kdlfmt
     nil
     nixfmt
     prettierd
@@ -49,6 +50,17 @@
           formatter = {
             command = "prettierd";
             args = [ ".json" ];
+          };
+        }
+        {
+          name = "kdl";
+          auto-format = false;
+          formatter = {
+            command = "kdlfmt";
+            args = [
+              "format"
+              "-"
+            ];
           };
         }
         {
