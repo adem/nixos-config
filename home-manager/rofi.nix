@@ -5,6 +5,6 @@
   plugins = [ pkgs.rofi-calc ];
   extraConfig = {
     modi = "calc,combi,drun,run,window";
-    combi-modi = "drun,run";
+    combi-modi = "window,drun,run";
   };
 }
