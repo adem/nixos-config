@@ -17,7 +17,6 @@
     acpi
     brightnessctl
     openvpn
-    pavucontrol
   ];
 
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;

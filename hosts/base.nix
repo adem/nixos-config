@@ -25,6 +25,7 @@
       nixfmt
       nnn
       obs-studio
+      pavucontrol
       restream-pkg
       ripgrep
       slurp
