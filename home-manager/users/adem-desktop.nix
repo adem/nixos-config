@@ -65,6 +65,11 @@ in
           };
           mp = mp.withDevices [ "nixos-mbp-adem" ];
           music-transcoded = music-transcoded.withDevices [ "nas" ];
+          notes = notes.withDevices [
+            "phone"
+            "nas"
+            "nixos-mbp-adem"
+          ];
           password-db = password-db.withDevices [ "phone" ];
           roehre = roehre.withDevices [
             "nas"

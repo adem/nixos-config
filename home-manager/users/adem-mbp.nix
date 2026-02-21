@@ -52,7 +52,11 @@ in
         gbc = gbc.withDevices [ "nas" ];
         mp = mp.withDevices [ "nixos-tower" ];
         music-partial = music-partial.withDevices [ "nas" ];
-        notes = notes.withDevices [ "phone" ];
+        notes = notes.withDevices [
+          "phone"
+          "nas"
+          "nixos-tower"
+        ];
         password-db = password-db.withDevices [ "phone" ];
         roehre = roehre.withDevices [
           "nas"
