@@ -2,6 +2,7 @@
 let
   screenshot = pkgs.callPackage ../../packages/screenshot.nix { };
   screencast = pkgs.callPackage ../../packages/screencast.nix { wfrecorder = pkgs.wf-recorder; };
+  notes-toggle = pkgs.callPackage ../../packages/notes-toggle.nix { };
 in
 {
   programs.waybar = import ../waybar;
@@ -45,6 +46,7 @@ in
           "${modifier}+Shift+apostrophe" = "exec ${screencast}/bin/screencast";
           "--no-repeat ${modifier}+Shift+v" = "exec voxtype record start";
           "--release ${modifier}+Shift+v" = "exec voxtype record stop";
+          "${modifier}+Shift+n" = "exec ${notes-toggle}/bin/notes-toggle";
         };
       modifier = "Mod4";
       startup = [
@@ -52,6 +54,12 @@ in
         { command = "waybar"; }
       ];
       terminal = "ghostty";
+      window.commands = [
+        {
+          criteria = { app_id = "com.ghostty.notes"; };
+          command = "floating enable, move to scratchpad, scratchpad show";
+        }
+      ];
       window.titlebar = false;
     };
   };
