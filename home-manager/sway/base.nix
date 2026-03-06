@@ -45,6 +45,10 @@ in
           "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
           "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "XF86AudioMicMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "XF86AudioPlay" = "exec playerctl play-pause";
+          "XF86AudioNext" = "exec playerctl next";
+          "XF86AudioPrev" = "exec playerctl previous";
+          "XF86AudioStop" = "exec playerctl stop";
           "${modifier}+Shift+s" = "sticky toggle";
           "${modifier}+Shift+semicolon" = "exec ${screenshot}/bin/screenshot";
           "${modifier}+Shift+apostrophe" = "exec ${screencast}/bin/screencast";
@@ -52,6 +56,7 @@ in
           "--release ${modifier}+Shift+v" = "exec voxtype record stop";
           "${modifier}+Shift+n" = "exec ${notes-toggle}/bin/notes-toggle";
           "${modifier}+Tab" = "exec swayr switch-to-urgent-or-lru-window";
+          "Mod1+space" = "focus mode_toggle";
         };
       modifier = "Mod4";
       startup = [
