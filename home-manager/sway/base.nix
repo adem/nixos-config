@@ -7,6 +7,11 @@ in
 {
   programs.waybar = import ../waybar;
 
+  programs.swayr = {
+    enable = true;
+    systemd.enable = true;
+  };
+
   wayland.windowManager.sway = {
     enable = true;
     config = {
@@ -46,6 +51,7 @@ in
           "--no-repeat ${modifier}+Shift+v" = "exec voxtype record start";
           "--release ${modifier}+Shift+v" = "exec voxtype record stop";
           "${modifier}+Shift+n" = "exec ${notes-toggle}/bin/notes-toggle";
+          "${modifier}+Tab" = "exec swayr switch-to-urgent-or-lru-window";
         };
       modifier = "Mod4";
       startup = [
