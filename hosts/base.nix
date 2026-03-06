@@ -94,6 +94,8 @@
     tailscale.enable = true;
   };
 
+  hardware.bluetooth.enable = true;
+
   time.timeZone = "Europe/Berlin";
 
   virtualisation.docker.enable = true;

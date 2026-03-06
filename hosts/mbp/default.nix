@@ -20,7 +20,6 @@
   ];
 
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
-  hardware.bluetooth.enable = true;
 
   home-manager.users = {
     adem = import ../../home-manager/users/adem-mbp.nix;
