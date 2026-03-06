@@ -12,6 +12,7 @@
       chromium
       fd
       fzf
+      gh
       git-crypt
       gitui
       gnupg
@@ -19,23 +20,33 @@
       htop
       imv
       jellyfin-desktop
+      jq
       libnotify
+      libqalculate
       mpv
       nil
       nixfmt
       nnn
       obs-studio
       pavucontrol
+      playerctl
       restream-pkg
       ripgrep
+      ripgrep-all
+      sage
+      rmapi
+      signal-desktop
       slurp
       sshfs
       sublime-merge
+      unzip
       usbutils
       voxtype-pkg
       wget
       wl-clipboard
+      xdg-utils
       yt-dlp
+      zstd
     ];
     interactiveShellInit = ''
       export GPG_TTY="$(tty)"
