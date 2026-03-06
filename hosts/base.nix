@@ -88,6 +88,7 @@
 
   services = {
     pipewire = {
+      alsa.enable = true;
       enable = true;
       pulse.enable = true;
     };
