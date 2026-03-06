@@ -105,7 +105,7 @@
           auto-format = true;
           language-servers = [
             "ruff"
-            "pylsp"
+            "basedpyright"
           ];
           rulers = [ 88 ];
         }
