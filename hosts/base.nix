@@ -1,7 +1,6 @@
 {
   pkgs,
   restream-pkg,
-  voxtype-pkg,
   ...
 }:
 {
@@ -41,7 +40,6 @@
       sublime-merge
       unzip
       usbutils
-      voxtype-pkg
       wget
       wl-clipboard
       xdg-utils

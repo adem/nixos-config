@@ -1,5 +1,5 @@
-{ email, sway }:
-{ pkgs, ... }:
+{ email, sway, voxtype-model }:
+{ pkgs, voxtype-pkg, ... }:
 {
   imports = [
     ../helix.nix
@@ -31,11 +31,16 @@
         PASSWORD_STORE_DIR = "~/.password-store";
       };
     };
+    voxtype = import ../voxtype.nix { inherit voxtype-pkg; model = voxtype-model; };
     zellij.enable = true;
   };
 
+  # Workaround: voxtype needs `which` on PATH for output driver detection.
+  systemd.user.services.voxtype.Service.Environment = [
+    "PATH=/run/current-system/sw/bin"
+  ];
+
   xdg.configFile = {
-    "voxtype/config.toml".source = ../../dotfiles/voxtype.toml;
     "zellij/config.kdl".source = ../../dotfiles/zellij.kdl;
     "zellij/plugins/room.wasm".source = pkgs.fetchurl {
       url = "https://github.com/rvcas/room/releases/download/v1.2.1/room.wasm";

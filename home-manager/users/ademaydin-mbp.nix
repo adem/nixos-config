@@ -5,6 +5,7 @@ let
   base = import ./base.nix {
     email = "aydin@meqo.de";
     sway = "mbp";
+    voxtype-model = "small";
   };
 in
 {
